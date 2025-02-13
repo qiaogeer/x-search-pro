@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="title">🔍 高级搜索</span>
+      <div class="button-group">
+        <button type="reset" class="reset-button" form="searchForm">重置</button>
+        <button type="submit" class="search-button" form="searchForm">开始搜索</button>
+      </div>
+    </div>
+    <form id="searchForm">
+      <div class="main-content">
+        <!-- 左侧列 -->
+        <div class="column">
+          <!-- 关键词搜索 -->
+          <div class="section">
+            <h2>关键词</h2>
+            <div class="form-group">
+              <label for="keywords">包含关键词</label>
+              <input type="text" id="keywords" placeholder="多个词用空格分隔">
+            </div>
+            <div class="form-group">
+              <label for="exactPhrase">精确短语</label>
+              <input type="text" id="exactPhrase" placeholder='如 "happy hour"'>
+            </div>
+            <div class="form-group">
+              <label for="orSearch">任意关键词</label>
+              <input type="text" id="orSearch" placeholder='如 "love OR hate"'>
+            </div>
+            <div class="form-group">
+              <label for="exclude">排除关键词</label>
+              <input type="text" id="exclude" placeholder="不想看到的词">
+            </div>
+          </div>
+        </div>
+
+        <!-- 中间列 -->
+        <div class="column">
+          <!-- 用户筛选 -->
+          <div class="section">
+            <h2>用户</h2>
+            <div class="form-group">
+              <label for="fromUser">来自用户</label>
+              <input type="text" id="fromUser" placeholder="输入用户名，不带@">
+            </div>
+            <div class="form-group">
+              <label for="toUser">发给用户</label>
+              <input type="text" id="toUser" placeholder="输入用户名，不带@">
+            </div>
+            <div class="form-group">
+              <label for="mentionUser">提到用户</label>
+              <input type="text" id="mentionUser" placeholder="输入用户名，不带@">
+            </div>
+          </div>
+
+          <!-- 互动筛选 -->
+          <div class="section">
+            <h2>互动</h2>
+            <div class="form-group">
+              <label for="minReplies">最少评论数</label>
+              <input type="number" id="minReplies" min="0" placeholder="不限制">
+            </div>
+            <div class="form-group">
+              <label for="minRetweets">最少转发数</label>
+              <input type="number" id="minRetweets" min="0" placeholder="不限制">
+            </div>
+            <div class="form-group">
+              <label for="minFaves">最少点赞数</label>
+              <input type="number" id="minFaves" min="0" placeholder="不限制">
+            </div>
+          </div>
+        </div>
+
+        <!-- 右侧列 -->
+        <div class="column">
+          <!-- 内容筛选 -->
+          <div class="section">
+            <h2>内容</h2>
+            <div class="form-group">
+              <label for="mediaType">媒体类型</label>
+              <select id="mediaType">
+                <option value="">不限</option>
+                <option value="filter:media">所有媒体</option>
+                <option value="filter:images">图片</option>
+                <option value="filter:videos">视频</option>
+                <option value="filter:native_video">原生视频</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="hasLinks">链接筛选</label>
+              <select id="hasLinks">
+                <option value="">不限</option>
+                <option value="filter:links">必须包含</option>
+                <option value="-filter:links">不包含</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 时间筛选 -->
+          <div class="section">
+            <h2>时间</h2>
+            <div class="form-group">
+              <label for="startTime">开始时间</label>
+              <input type="date" id="startTime">
+            </div>
+            <div class="form-group">
+              <label for="endTime">结束时间</label>
+              <input type="date" id="endTime">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Twitter 高级搜索助手",
+    "description": "应用名称"
+  },
+  "appDesc": {
+    "message": "强大的 Twitter 高级搜索工具，支持关键词、用户、互动数据、时间等多维度搜索",
+    "description": "应用描述"
+  }
+}

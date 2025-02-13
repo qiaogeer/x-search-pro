@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Twitter Advanced Search",
+    "description": "The title of the application"
+  },
+  "appDesc": {
+    "message": "A powerful Twitter advanced search tool supporting keywords, users, engagement metrics, time ranges, and more",
+    "description": "The description of the application"
+  }
+}
